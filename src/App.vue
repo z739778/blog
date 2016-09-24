@@ -10,7 +10,6 @@
 
 <script>
 import Hello from './components/Hello'
-
 export default {
   components: {
     Hello
@@ -18,17 +17,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$black:#000;
 html {
   height: 100%;
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: $black;
+  }
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
 
 #app {
   color: #2c3e50;
