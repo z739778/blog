@@ -4,9 +4,9 @@ require('bootstrap/dist/css/bootstrap.css')
 
 import Vue from 'vue'
 import App from './App'
-
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+import VueRouter from 'vue-router'
+import configRouter from './router/index'
+Vue.use(VueRouter)
+const router = new VueRouter()
+configRouter(router)
+router.start(Vue.extend(App), '#app')
